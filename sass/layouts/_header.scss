@@ -1,0 +1,62 @@
+
+.header {
+  padding: $Default-padding ;
+  box-shadow: $light-head-shadow;
+  display: grid;
+  place-content: end;
+  
+
+     @include respond (phone) {
+      width:100vw;
+     }
+      
+
+
+  &-icon-conatiner {
+    display: flex;
+    gap: 3rem;
+    padding: 0 2rem;
+  }
+
+  &_icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: #eee;
+    cursor: pointer;
+  }
+
+  &_icon:hover {
+    fill:$color-primary;
+
+  }
+  
+  &-brightness-icon {
+    transition: .4s;
+    &:hover {
+      animation: icon-headscale .3s ease-in-out  infinite  alternate;
+    }
+  }
+
+  &-prefrences-icon {
+    position: relative;
+   transition: all .4s linear;
+  &:hover {
+    transform: rotateZ(370deg) scale(1.04);
+  }
+}
+
+
+}
+
+
+.moon {
+  fill:$color-primary;
+}
+
+.light-mode {
+  display: none;
+}
+
+.dark {
+  display: inline-block;
+}

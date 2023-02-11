@@ -1,0 +1,51 @@
+
+
+.main-lightmode {
+  background:$main-lightmode ;
+  color: #000;
+}
+
+
+.info-container-mode {
+   background: #fff;
+
+
+   *,
+   p,
+   h1,
+   h2,
+   h3,
+   h4 {
+     color: $color-black !important;
+     border-color: #000;
+   }
+
+
+   span {
+    color: $color-gold !important;
+   }
+   
+
+   #typing-text {
+    color:$color-gold !important;
+    font-weight: 700;
+   }
+
+
+}
+
+.avater-mode {
+  background: #fff;
+}
+
+.header-mode {
+  box-shadow: 0px 2px 4px rgba(0,0,0, 0.3) !important;
+
+  svg {
+    fill:$color-black;
+  }
+}
+
+ .light {
+  display: inline-block;
+}

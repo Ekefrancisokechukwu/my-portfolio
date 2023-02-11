@@ -1,0 +1,34 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Poppins:wght@300&display=swap');
+
+
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+ html {
+   scroll-behavior: smooth;
+  //  font-size: 62.5%;
+
+   @include respond(tab-port) {
+    font-size: 60%;
+   }
+  }
+  
+  body {
+  background-color : $color-main;
+  text-decoration: none;
+ }
+
+ .body-mode {
+  background-color: #ffff;
+  color: $color-black;
+  fill: black;
+ }

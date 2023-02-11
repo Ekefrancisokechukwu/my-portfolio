@@ -1,0 +1,55 @@
+
+
+.heading-primary {
+  text-transform: capitalize;
+  margin-top: $margin-small;
+  color: brown;
+  font-family: 'Kavoon', sans-serif;
+  font-weight: 100;
+  display: inline-block;
+  font-size: 1.5rem;
+  position: relative;
+
+   &::before,
+   &::after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+   
+  }
+  
+  &::before {
+    bottom: -.1rem;
+    left: -.6rem;
+    border-bottom: .3rem solid $color-primary-1;
+    border-left: .3rem solid $color-primary-1;
+  }
+
+  &::after {
+    top: 0rem;
+    right: -.7rem;
+    border-top: .3rem solid $color-primary-1;
+    border-right: .3rem solid $color-primary-1;
+  }
+
+}
+
+.heading-secondary {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $color-gray-2;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+     bottom: -.2rem;
+     right:-.4rem;
+     z-index: -1-20;
+    background:$color-gradient-1 ;
+  }
+}

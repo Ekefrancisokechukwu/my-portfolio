@@ -1,0 +1,36 @@
+
+.favourite {
+  margin-top: $margin-top;
+
+  &-container {
+     padding: 2rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     gap:3rem;
+  }
+
+  &-icons-wrap {
+   padding: 2rem;
+   border-top: .6px  solid $color-gray-light ;
+   border-right: .6px  solid $color-gray-light ;
+   cursor: pointer;
+   transition: all .3s;
+
+   @include respond(phone) {
+    padding: .7rem;
+   }
+
+   &:hover {
+    @include iconstyle;
+
+    
+   }
+  }
+
+  &-icons {
+    width:4.3rem;
+    height: 4.3rem;
+  }
+}

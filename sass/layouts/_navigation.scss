@@ -1,0 +1,161 @@
+
+
+.sidebar {
+  position: fixed;
+  top:0;
+  left:-30rem;
+  background: $color-black ;
+  height: 100%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  transition: all .3s ease-in-out;
+  z-index: 500;
+  
+  
+   &active {
+    left: 0px;
+   }
+ 
+  //  STYLING THE LIST SECTION OF SIDEBAR
+            
+  &-list {
+  list-style: none;
+  margin-top: 5rem;
+  }
+  
+  &-item {
+    padding: 1rem;
+    font-size: $default-font-size;
+    transition: all .3s linear;
+      border-bottom: 1px solid $color-grey;
+      margin-top: 1rem;
+   
+      &:hover {
+        padding-left: 1.8rem;
+      }
+    
+  }
+   
+  &-link {
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+    color:$color-grey;
+  }
+
+  &-listicon {
+    flex-direction: row;
+    justify-content: space-between;
+    width:2rem;
+    height:2rem;
+    fill:$color-primary;
+    margin-right: 1.8rem;
+  }
+
+  &-clickme {
+     left: 5rem;
+     bottom: 9rem;
+     display: block;
+     width:2rem;
+     height: 2rem;
+     border-radius: 50%;
+     transform: translate(50%, 50%);
+     position: absolute;
+     background-color: $color-primary;
+     cursor: pointer;
+
+
+     &::after,
+     &::before{
+      content: "";
+      width:2rem;
+      height: 2rem;
+      position: absolute;
+      border-radius: 50%;
+      background:$color-gradient-1 ;
+     }
+
+     &::after {
+      left: 24;
+     }
+
+     &::before {
+      bottom:-1rem ;
+      left: 10;
+     }
+  } 
+
+   &-social {
+     margin-bottom: 1rem;
+     li {
+      display: inline-block;
+      margin-left:1.5rem;
+      
+      &:not(:first-child) {
+        margin-left: 3rem;
+      }
+    }
+
+
+    &_icons {
+      width:2rem;
+      height:2rem;
+      fill: $color-grey;
+    }
+   }
+   
+}
+
+ .sidebar .toggle-btn {
+  position: fixed;
+  top:1rem;
+  left: 5rem;
+  width:30px;
+  height: 1rem;
+  cursor: pointer;
+  
+  span {
+    position: absolute;
+    border-radius: .5rem;
+    width:100%;
+    height: .23rem;
+    background: $color-primary;
+    transform: translateY(-50%);
+    transition:  all .3s ease-in-out;
+    
+    &:nth-child(1) {
+      top:.5rem;
+    }
+
+    &:nth-child(2) {
+      top:1rem;
+    }
+
+    &:nth-child(3) {
+      top:1.5rem;
+    }
+     
+  }
+}
+
+.sidebar.hide {
+   left: 0;
+}
+
+.sidebar.hide .toggle-btn span:nth-child(1) {
+  top:1rem;
+  transform: rotate(135deg);
+}
+
+.sidebar.hide .toggle-btn span:nth-child(2) {
+  display: none;
+}
+
+.sidebar.hide .toggle-btn span:nth-child(3) {
+  top:1rem;
+  transform:  rotate(-135deg);
+}
+

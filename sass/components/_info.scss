@@ -1,0 +1,249 @@
+
+.info {
+  z-index: 2000;
+  position: relative;
+
+  &-sidebar {
+     position: fixed;
+     top:50%;
+     left: 42.8%;
+     z-index: 1;
+     transform: translate(-60%, -50%);
+     background: $color-main;
+     box-shadow: -2px  -3px 3px 0 rgba(0,0,0, 0.3),
+      0px  3px 3px 0 rgba(0,0,0, 0.3);
+      border-radius: 5px;
+
+      @include respond(phone) {
+        left: 3rem;
+        z-index: 4000;
+      }
+
+     
+
+    &_list {
+     list-style: none;
+
+    }
+
+    &_item {
+     padding: 1.2rem .2rem;
+     transition: all .3s;
+
+     @include respond(tab-land) {
+        padding: .7rem 0;
+
+     }
+
+     &-active {
+      background: $color-black;
+    }
+
+     &:not(:first-child) {
+       border-top: .8px solid $color-gray-light;
+     }
+
+    &:hover {
+      background:$color-black;
+   }
+
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      align-items: center;
+      text-decoration: inherit;
+      font-size: .6rem;
+      color: $color-grey;
+      
+    }
+
+    &_icon {
+      width:1.6rem;
+      height: 1.6rem;
+      fill:$color-gray-light;
+    }
+  }
+
+  &-header {
+  //  position: fixed;
+   width:100%;
+   top:0;
+    // box-shadow: 0 4px 5px 1px  rgba(0,0,0,0.3);
+    z-index: 300;
+  }
+
+  &-container {
+    flex: 55%;
+  height: 85vh;
+  transform: scaleY(1.01);
+  box-shadow: $dark-shadow;
+  z-index: 2000;
+  text-align: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: relative;
+
+  @include respond(phone) {
+    margin-top: 2rem;
+    overflow: visible;
+  }
+   
+  &::-webkit-scrollbar {
+    width:.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: .9rem;
+    background: black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-gray-light;
+    height:5rem;
+    border-radius: 5px;
+  
+  }
+  }
+
+  &-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    margin-top: $margin-small;
+    border-bottom: 1px solid $color-gray-light;
+    padding-bottom: 1rem;
+  } 
+
+  &-icon {
+    width:3rem;
+    height: 3rem;
+    fill:$color-primary;
+    // box-shadow: 0 5px 3p rgba(0,0,0,0.45);
+  }
+
+  &-text-container {
+    margin-top: $margin-top;
+    color:$color-primary-2;
+    padding: 2rem;
+    font-size: 1.3rem;
+
+    @include respond(phone) {
+      margin-top: .3rem;
+   }
+
+  }
+
+  &-text {
+    column-count: 2;
+    column-rule: 1px solid ;
+    text-align: left;
+
+    @include respond(phone) {
+      column-count: 1;
+    
+   }
+  }
+
+  &-list{
+    padding-top: 3rem;
+    list-style: none;
+    text-align: center;
+    font-size: 1.1rem;
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      width: 70%;
+      margin-top: 4rem;
+      padding: 1rem;
+    }
+
+    li {
+      line-height: 3;
+    }
+  }
+
+
+  &-row2 {
+  }
+  
+  &-contact {
+    margin-top: $margin-small;
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    padding: 3rem;
+
+    @include respond (tab-land) {
+      gap:1rem;
+      padding: 2rem;
+    }
+    
+
+   &_iconContact {
+    padding: 1rem;
+    border-right: 1px solid rgba( 0,0,0,0.6);
+    border-top: 1px solid rgba( 0,0,0,0.6);
+    transition: all .3s;
+    
+    &:hover {
+     @include iconstyle;
+    }
+   }
+
+    &_icon {
+      width:4rem;
+      height: 4rem;
+      fill:$color-gray-light;
+      transition: all .5s;
+      
+    
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &--1 {
+        &:hover {
+          fill:#245883;
+        }
+      }
+
+      &--2 {
+        &:hover {
+          fill:#379937
+        }
+      }
+
+      &--3 {
+       padding: .5rem;
+       border-radius: 8px ;
+        &:hover {
+          fill:$color-black;
+          background: $color-gray-light;
+          
+        }
+      }
+
+      &--4 {
+
+        &:hover {
+          fill:#ff00006b;
+        }
+      }
+    }
+  }
+
+}
+
+// .sticky {
+//   position: fixed;
+//   top:0;
+//   width:100%
+// }

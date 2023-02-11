@@ -1,0 +1,213 @@
+
+.skill {
+  
+
+
+  &-container {
+    margin-top: $margin-top;
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+
+    @include respond(phone) {
+       flex-direction: column;
+       gap:3rem;
+    }
+  }
+
+  &-codeing {
+    border-right: 1px solid $color-gray-light;
+    flex: 50%;
+
+    @include respond(phone) {
+      flex: 0;
+      border-right: none;
+      padding: 1.5rem;
+      border-bottom: .5px solid $color-gray-light;
+   }
+   }
+
+   &-design {
+    flex:50%;
+   }
+
+
+
+  &-icon {
+    width:2rem;
+    height: 2rem;
+  }
+
+  &-code {
+    margin-top: $margin-small;
+    padding: 1rem;
+
+    &_container {
+      background: $color-gray-light ;
+      border-radius: 5px;
+      width:100%;
+    }
+    
+    &_text {
+      margin-top: $margin-small;
+      padding: 1rem;
+      font-size: $default-font-size;
+      color: $color-gray-light;
+
+      &:not(:first-child) {
+        // border-top:  .9px solid $color-gray-light;
+      }
+    }
+
+   
+  }
+
+  &-bar {
+    padding: .3rem;
+    border-radius: 5px;
+    background: $color-gold;
+
+    &_html{
+     width:80%;
+    }
+
+    &_css {
+      width:60%;
+    }
+
+    &_sass {
+      width:75%;
+    }
+
+    &_javascript {
+      width:20%;
+    }
+
+    &_react {
+      width:5%;
+    }
+
+  }
+
+
+  &-design {
+    
+    
+    &_contain {
+     margin-top: 4rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 1rem;
+     gap:2rem;
+     width: 100%;
+
+     @include respond(phone)  {
+      gap:1rem;
+      padding: .5rem;
+     }
+
+     @include respond(tab-land) {
+       padding: .5rem ;
+       gap:1rem;
+     }
+
+     @include respond (tab-port) {
+      padding: .3rem;
+      gap:.3rem
+     }
+   }
+
+   &_wrap {
+     
+      background-color: red;
+      width:5rem;
+      height:5rem;
+      border-radius: 50%;
+   }
+
+  }
+
+}
+
+.progress-circle {
+  font-size: 20px;
+  position: relative;
+  width:5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background-color: $color-gray-light;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-main;
+    width:4.3rem;
+    height: 4.3rem;
+    border-radius: 50%;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    color: $color-grey;
+    font-size: $default-font-size;
+  }
+}
+
+.left-half-clipper {
+  width:5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: conic-gradient($color-gold 30deg, $color-gray-light 0deg);
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &_ai {
+    background: conic-gradient($color-gold 25deg, $color-gray-light 0deg);
+  }
+
+  &_ps {
+    background: conic-gradient($color-gold 30deg, $color-gray-light 0deg);
+  }
+
+  &_canvas {
+    background: conic-gradient($color-gold 160deg, $color-gray-light 0deg);
+  }
+
+  &_xd {
+    background: conic-gradient($color-gold 100deg, $color-gray-light 0deg);
+  }
+
+  &_flutter {
+    background: conic-gradient($color-gold 188deg, $color-gray-light 0deg);
+  }
+
+  &_pics {
+    background: conic-gradient($color-gold 80deg, $color-gray-light 0deg);
+  }
+
+  &_zoom {
+    background: conic-gradient($color-gold 300deg, $color-gray-light 0deg);
+  }
+
+  &_flex {
+    background: conic-gradient($color-gold 360deg, $color-gray-light 0deg);
+  }
+}
+
+.circle-container {
+  p {
+    color: $color-gray-light;
+  }
+}
